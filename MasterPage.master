@@ -1,0 +1,390 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+      <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AS Export In Moradabad</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Vendor CSS (Bootstrap & Icon Font) -->
+    <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/font-awesome-pro.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/vendor/customFonts.css"> -->
+
+    <!-- Plugins CSS (All Plugins Files) -->
+    <!-- <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/photoswipe.css">
+    <link rel="stylesheet" href="assets/css/plugins/photoswipe-default-skin.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css"> -->
+
+    <!-- Main Style CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+    <!-- Topbar Section Start -->
+    <div class="topbar-section section bg-primary2">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-auto col-12">
+                    <p class="text-white text-center text-md-left my-2"><asp:Label  runat="server" ID="lblphone"></asp:Label></p>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                    <div class="topbar-menu">
+                        <ul>
+                            <li><a href="#" class="text-white"><i class="fa fa-map-marker-alt"></i><asp:Label  runat="server" ID="lbladdress"></asp:Label></a></li>
+                            <li><a href="login.aspx" class="text-white"><i class="fa fa-user"></i>My Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar Section End -->
+    <!-- Header Section Start -->
+    <div class="header-section section bg-white d-none d-xl-block">
+        <div class="container">
+            <div class="row row-cols-lg-3 align-items-center">
+
+                <!-- Header Language & Currency Start -->
+                <div class="col">
+                   <%-- <ul class="header-lan-curr">
+                        <li><a href="#">English</a>
+                            <ul class="curr-lan-sub-menu">
+                                <li><a href="#">Français</a></li>
+                                <li><a href="#">Deutsch</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">USD</a>
+                            <ul class="curr-lan-sub-menu">
+                                <li><a href="#">EUR</a></li>
+                                <li><a href="#">GBP</a></li>
+                            </ul>
+                        </li>
+                    </ul>--%>
+                </div>
+                <!-- Header Language & Currency End -->
+
+                <!-- Header Logo Start -->
+                <div class="col">
+                    <div class="header-logo justify-content-center">
+                        <a href="Default.aspx"><img src="admin/logoimges/logo/1.jpg" Style="height:50px"></a>
+                    </div>
+                </div>
+                <!-- Header Logo End -->
+
+                <!-- Header Tools Start -->
+                <div class="col">
+                   <%-- <div class="header-tools justify-content-end">
+                        <div class="header-login">
+                            <a href="my-account.html"><i class="fal fa-user"></i></a>
+                        </div>
+                        <div class="header-search">
+                            <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fal fa-search"></i></a>
+                        </div>
+                        <div class="header-wishlist">
+                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
+                        </div>
+                        <div class="header-cart">
+                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>--%>
+                </div>
+                <!-- Header Tools End -->
+
+            </div>
+        </div>
+
+        <!-- Site Menu Section Start -->
+        <div class="site-menu-section section">
+            <div class="container">
+                <nav class="site-main-menu justify-content-center">
+                    <ul>
+                        <li><a href="Default.aspx"><span class="menu-text">Home</span></a></li>
+                        <li><a href="About.aspx"><span class="menu-text">About Us</span></a></li>
+                        
+                     
+                        <li class="has-children"><a href="#"><span class="menu-text">Our Gallery</span></a>
+                            <ul class="sub-menu">
+                              <asp:Label runat="server" ID="lblcategory"></asp:Label>
+                                
+                            </ul>
+                        </li>
+
+                        <li><a href="Contactus.aspx"><span class="menu-text">Contact Us</span></a></li>
+                        <li><a href="Enquiry.aspx"><span class="menu-text">Enquiry</span></a></li>
+
+
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Site Menu Section End -->
+
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Header Sticky Section Start -->
+    <div class="sticky-header header-menu-center section bg-white d-none d-xl-block">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Header Logo Start -->
+                <div class="col">
+                    <div class="header-logo">
+                        <a href="Default.aspx"><img src="admin/logoimges/logo/1.jpg" Style="height:50px"></a>
+                    </div>
+                </div>
+                <!-- Header Logo End -->
+
+                <!-- Search Start -->
+                <div class="col d-none d-xl-block">
+                    <nav class="site-main-menu justify-content-center">
+                        <ul>
+                            <li><a href="Default.aspx"><span class="menu-text">Home</span></a></li>
+                             <li><a href="aboutus.aspx"><span class="menu-text">About Us</span></a></li>
+                            
+                           
+                            <li class="has-children"><a href="#"><span class="menu-text">Our Gallery</span></a>
+                                <ul class="sub-menu">
+                                  <asp:Label runat="server" ID="lblcategory1"></asp:Label>
+                                </ul>
+                            </li>
+
+                            <li><a href="contactus.aspx"><span class="menu-text">Contact Us</span></a></li>
+                            <li><a href="Enquiry.aspx"><span class="menu-text">Enquiry</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Search End -->
+
+                <!-- Header Tools Start -->
+                <div class="col-auto">
+                    <div class="header-tools justify-content-end">
+                        
+                       
+                       
+                      
+                       
+                    </div>
+                </div>
+                <!-- Header Tools End -->
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Header Sticky Section End -->
+    <!-- Mobile Header Section Start -->
+    <div class="mobile-header bg-white section d-xl-none">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Header Logo Start -->
+                <div class="col">
+                    <div class="header-logo">
+                        <a href="Default.aspx"><img src="admin/logoimges/logo/1.jpg" Style="height:50px"></a>
+                    </div>
+                </div>
+                <!-- Header Logo End -->
+
+                <!-- Header Tools Start -->
+                <div class="col-auto">
+                    <div class="header-tools justify-content-end">
+                       
+                      
+                       
+                        <div class="mobile-menu-toggle">
+                            <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
+                                <svg viewBox="0 0 800 600">
+                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                                    <path d="M300,320 L540,320" id="middle"></path>
+                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Tools End -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Header Section End -->
+
+    <!-- Mobile Header Section Start -->
+    <div class="mobile-header sticky-header bg-white section d-xl-none">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Header Logo Start -->
+                <div class="col">
+                    <div class="header-logo">
+                        <a href="Default.aspx"><img src="admin/logoimges/logo/1.jpg" Style="height:50px"></a>
+                    </div>
+                </div>
+                <!-- Header Logo End -->
+
+            
+
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Header Section End -->
+    
+
+   
+  
+
+    <!-- OffCanvas Search Start -->
+    <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+        <div class="inner customScroll">
+            <div class="offcanvas-menu-search-form">
+                <form >
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fal fa-search"></i></button>
+                </form>
+            </div>
+            <div class="offcanvas-menu">
+                <ul>
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="about.aspx">About us</a></li>
+                   
+                    <li><a href="#"><span class="menu-text">Our Gallery</span></a>
+                        <ul class="sub-menu">
+                          <asp:Label runat="server" ID="lblcategory2"></asp:Label>
+                        </ul>
+                    </li>
+                    <li><a href="Contactus.aspx">Contact Us</a></li>
+                    <li><a href="Enquiry.aspx">Enquiry</a></li>
+                </ul>
+            </div>
+       
+            <div class="offcanvas-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+<%--                <a href="#"><i class="fab fa-twitter"></i></a>--%>
+              <%--  <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>--%>
+            </div>
+        </div>
+    </div>
+    <!-- OffCanvas Search End -->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+         <div class="footer1-section section section-padding">
+        <div class="container">
+            <div class="row text-center row-cols-1">
+
+                <div class="footer1-logo col text-center">
+                   <img src="admin/logoimges/logo/1.jpg" Style="height:50px">
+                </div>
+
+                <div class="footer1-menu col">
+                    <ul class="widget-menu justify-content-center">
+                        <li><a href="About.aspx">Home</a></li>
+                        <li><a href="About.aspx">About us</a></li>
+                        
+                        <li><a href="contactus.aspx">Contact</a></li>
+                        <li><a href="Enquiry.aspx">Enquiry</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer1-subscribe d-flex flex-column col">
+                   
+                    <!-- mailchimp-alerts Start -->
+                    <div class="mailchimp-alerts text-centre">
+                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                        <div class="mailchimp-success text-success"></div><!-- mailchimp-success end -->
+                        <div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->
+                    </div><!-- mailchimp-alerts end -->
+                </div>
+                <div class="footer1-social col">
+                    <ul class="widget-social justify-content-center">
+                        <li class="hintT-top" data-hint="Twitter"> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                        <li class="hintT-top" data-hint="Facebook"> <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="hintT-top" data-hint="Instagram"> <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        <li class="hintT-top" data-hint="Youtube"> <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer1-copyright col">
+                    <p class="copyright">Copyright &copy; 2020 <asp:Label runat="server" ID="lblcompanyname"></asp:Label> . All Rights Reserved | <a href="https://parakitesolutions.com/">Parakite Solutions</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+  
+
+    <!-- JS
+============================================ -->
+
+    <!-- Vendors JS -->
+    <!-- <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
+<script src="assets/js/vendor/bootstrap.bundle.min.js"></script> -->
+
+    <!-- Plugins JS -->
+    <!-- <script src="assets/js/plugins/select2.min.js"></script>
+<script src="assets/js/plugins/jquery.nice-select.min.js"></script>
+<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="assets/js/plugins/swiper.min.js"></script>
+<script src="assets/js/plugins/slick.min.js"></script>
+<script src="assets/js/plugins/mo.min.js"></script>
+<script src="assets/js/plugins/jquery.instagramFeed.min.js"></script>
+<script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/plugins/jquery.countdown.min.js"></script>
+<script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+<script src="assets/js/plugins/jquery.matchHeight-min.js"></script>
+<script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+<script src="assets/js/plugins/photoswipe.min.js"></script>
+<script src="assets/js/plugins/photoswipe-ui-default.min.js"></script>
+<script src="assets/js/plugins/jquery.zoom.min.js"></script>
+<script src="assets/js/plugins/ResizeSensor.js"></script>
+<script src="assets/js/plugins/jquery.sticky-sidebar.min.js"></script>
+<script src="assets/js/plugins/product360.js"></script>
+<script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/plugins/jquery.scrollUp.min.js"></script>
+<script src="assets/js/plugins/scrollax.min.js"></script> -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <script src="assets/js/vendor/vendor.min.js"></script>
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+    <!-- Main Activation JS -->
+    <script src="assets/js/main.js"></script>
+    </div>
+    </form>
+</body>
+</html>
